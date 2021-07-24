@@ -1,0 +1,31 @@
+.Contents {
+    min-height: 600px;
+    margin: auto;
+}
+
+.Background_image {
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(Bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.textual_image {
+    padding-top: 12%;
+    width: 80%;
+    margin: auto;
+}
+
+.content {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    overflow: hidden;
+    margin-bottom: 12%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#foot {
+    background-color: black;
+    min-height: 100px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head><title>Motor Web App</title>
+<script type="text/javascript">
+function populate(s1,s2)
+{
+	var s1 = document.getElementById(s1);
+	var s2 = document.getElementById(s2);
+	s2.innerHTML = "";
+	if(s1.value == "MX")
+	{
+		var optionArray = ["|","1|64","2|150"];
+	}
+	else if(s1.value == "AX")
+	{
+		var optionArray = ["|","1|12A","2|18A"];
+	}
+	for(var op in optionArray)
+	{
+		var pair = optionArray[op].split("|");
+		var newOption = document.createElement("option");
+		newOption.value = pair[0];
+		newOption.innerHTML = pair[1];
+		s2.options.add(newOption);
+	}
+
+}
+ 
+</script>
+</head>
+<body>
+<h2>Choose Motor</h2>
+<hr />
+Choose Type:
+<select id="a" name="Type" required onchange="populate('a','b')">
+	<option value="">Motor</option>
+	<option value="MX">MX</option>
+	<option value="AX">AX</option>
+</select>
+<hr />
+Choose Number: 
+<select id="b" name="Number" required onselect="populate2('b','c')"></select>
+
+<hr />
+<form>
+ 	<label for = "ID">Enter ID:</label>
+ 	<input type="text" name="IDno" placeholder="ID Number" maxlength="10" required>
+</form>
+
+<hr />
+
+<table border = "1">
+	<thead>
+		<tr>
+			<th>Model Number</th>
+			<th>ID Number</th>
+			<th>Working Status</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+</body>
+</html>
